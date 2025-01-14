@@ -8,14 +8,12 @@
     padding: 20px;
 }
 
-
 .loginForm {
-    width: 150%;
-    min-height: 45vh;
+    width: 100%;
     max-width: 500px;
+    min-height: 45vh;
     background: #b0b0b0;
     padding: 20px 30px;
-    padding-right: 60px;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     text-align: center;
@@ -28,21 +26,19 @@
     }
 }
 
-
 @keyframes fadeIn {
     from {
-      opacity: 0;
-      transform: translate(20px);
+        opacity: 0;
+        transform: translate(20px);
     }
     to {
-      opacity: 1;
-      transform: translateY(0);
+        opacity: 1;
+        transform: translateY(0);
     }
-  }
-
+}
 
 .inputField {
-    width: 100%;
+    width: 93%;
     padding: 12px 15px;
     margin: 10px 0;
     border: 1px solid #ddd;
@@ -54,16 +50,13 @@
         outline: none;
         border-color: #ffd966;
         box-shadow: 0 0 5px rgba(255, 217, 102, 0.5);
-
     }
 }
-
 
 .submitButton {
     width: 100%;
     padding: 12px;
     margin-top: 25px;
-    margin-left: 15px;
     font-size: 1.1rem;
     color: #cccccc;
     background: #1a2e23;
@@ -77,12 +70,59 @@
     }
 }
 
-
 .label {
-    width: 150%;
-    max-width: 600px;
     display: block;
     font-weight: 600;
     margin-bottom: 5px;
     color: #666;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For tablets (max-width: 768px) */
+@media (max-width: 768px) {
+    .loginForm {
+        padding: 15px 20px;
+        max-width: 90%;
+    }
+
+    .loginForm h2 {
+        font-size: 1.6rem;
+    }
+
+    .inputField {
+        font-size: 0.95rem;
+        padding: 10px 12px;
+    }
+
+    .submitButton {
+        font-size: 1rem;
+        padding: 10px;
+    }
+}
+
+/* For mobile devices (max-width: 480px) */
+@media (max-width: 480px) {
+    .loginForm {
+        padding: 10px 15px;
+        max-width: 95%;
+    }
+
+    .loginForm h2 {
+        font-size: 1.4rem;
+    }
+
+    .inputField {
+        font-size: 0.85rem;
+        padding: 8px 10px;
+    }
+
+    .submitButton {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    .label {
+        font-size: 0.85rem;
+    }
 }
