@@ -19,7 +19,7 @@ const Login: React.FC<LoginProps> = ({ onLogin }) => {
         try {
             await onLogin(email, password);
             setLoading(false)
-            // router.push("dashboa
+            // router.push("/dashboard")
         } catch (error) {
             console.error("Login failed: ", error)
             alert("Login failed. Please check your credentials")
@@ -27,6 +27,7 @@ const Login: React.FC<LoginProps> = ({ onLogin }) => {
             return
         }
     };
+        
 
     return (
         <div className={styles.background}>

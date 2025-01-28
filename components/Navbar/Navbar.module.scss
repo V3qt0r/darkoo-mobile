@@ -1,0 +1,65 @@
+.header {
+    position: fixed;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1rem;
+    background-color: #27293d;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+    width: 96%;
+}
+
+.iconContainer {
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+
+.userName {
+    margin-left: 0.5rem;
+    font-size: 1rem;
+    color: #e4e4eb;
+    font-weight: bold;
+    cursor: default;
+}
+
+.dropdown {
+    position: absolute;
+    top: 3rem;
+    left: 0;
+    background-color: #2e3048;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    z-index: 1000;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.dropdown li {
+    padding: 0.75rem 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dropdown ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown li:hover {
+    background-color: #3a3c5a;
+}
+
+.icon {
+    font-size: 2rem;
+    color: #e4e4eb;
+    transition: transform 0.3s;
+}
+
+.icon:hover {
+    transform: scale(1.1);
+}

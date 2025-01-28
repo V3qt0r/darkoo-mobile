@@ -30,14 +30,15 @@ const LoginPage: React.FC = () => {
             if(token) {
                 localStorage.setItem("token", token);
                 alert("Login successful! Token saved");
-                router.push("dashboard")
+                router.push("/dashboard")
             } else {
                 throw new Error("Token not found in response")
             }
         } catch (error) {
             console.error("Error during login", error);
             alert("Login failed. Please try again")
-            return
+            router.push("/login")
+            return 
         }
     };
 

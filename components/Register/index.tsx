@@ -1,6 +1,7 @@
 import React, {useState } from "react";
 import { useRouter } from "next/router";
 import styles from "./Register.module.scss";
+import { FaUserCircle } from 'react-icons/fa';
 
 
 const Register: React.FC = () => {
@@ -49,6 +50,7 @@ const Register: React.FC = () => {
     return (
         <div className={styles.background}>
         <div className={styles.container}>
+        <FaUserCircle className={styles.icon} />
             <h1 className={styles.heading}>Register</h1>
             <form>
                 <div className={styles.inputField}>
@@ -94,72 +96,3 @@ export default Register;
 
 
 
-// const handleDone = async () => {
-    //     if(!formData.isAbove18){
-    //         alert("You must confirm you are above 18 to proceed");
-    //         return;
-    //     }
-
-    //     if (formData.email == "" || formData.password == "") {
-    //         alert("Please enter a valid email and password")
-    //         return;
-    //     }
-    //     try {
-    //         const response = await fetch(`${baseUrl}/user/register`, {
-    //             method: "POST",
-    //                 headers: {
-    //                     "Content-Type": "application/json",
-    //                 },
-    //                 body: JSON.stringify(formData),
-    //         });
-    //         if (!response.ok){
-    //             alert("Registration failed! Please try again");
-    //             throw new Error(("Registration failed! Please try again"))
-    //         }
-    //         alert("Registration successful! Redirecting to set password...")
-    //         router.push("/set-password")
-    //     } catch(error) {
-    //         console.log("Error during registration: ", error);
-    //         alert("Registration failed!");
-    //     }
-    // };
-
-    // const handleDone = async () => {
-    //     if (!formData.isAbove18) {
-    //         alert("You must confirm you are above 18 to proceed");
-    //         return;
-    //     }
-    
-    //     if (!formData.email || !formData.password) {
-    //         alert("Please enter a valid email and password");
-    //         return;
-    //     }
-    
-    //     console.log("Request payload:", JSON.stringify(formData));
-    //     console.log("Base URL:", baseUrl);
-    
-    //     try {
-    //         const response = await fetch(`${baseUrl}/user/register`, {
-    //             method: "POST",
-    //             headers: {
-    //                 "Content-Type": "application/json",
-    //             },
-    //             body: JSON.stringify(formData),
-    //         });
-    
-    //         const responseData = await response.json();
-    //         console.log("Response data:", responseData);
-    
-    //         if (!response.ok) {
-    //             // Display the backend error message if provided
-    //             alert(responseData.message || "Registration failed! Please try again.");
-    //             return;
-    //         }
-    
-    //         alert("Registration successful! Redirecting to set password...");
-    //         router.push("/set-password");
-    //     } catch (error) {
-    //         console.error("Error during registration:", error);
-    //         alert("Registration failed! Please check your network or try again later.");
-    //     }
-    // };

@@ -1,0 +1,112 @@
+.profilePage {
+    background-color: #1e1e2f;
+    color: #e4e4eb;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+}
+
+
+
+.card {
+    background-color: #27293d;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 100%;
+    animation: fadeIn 0.3s ease-in-out;
+    max-width: 400px;
+}
+
+.iconContainer {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    color: #e4e4eb;
+}
+
+.iconSelection {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.iconList {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1rem;
+}
+
+.animalIcon {
+    font-size: 2rem;
+    cursor: pointer;
+    color: #e4e4eb;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.animalIcon:hover {
+    transform: scale(1.2);
+    color: #ffcc00;
+}
+
+.formGroup {
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #e4e4eb;
+}
+
+.input {
+    display: block;
+    width: 100%;
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    border: 1px solid #4c4f6d;
+    border-radius: 0.5rem;
+    background-color: #2e3048;
+    color: #e4e4eb;
+}
+
+.input:focus {
+    outline: none;
+    border-color: #ffcc00;
+}
+
+.updateButton {
+    background-color: #3a3c5a;
+    color: #e4e4eb;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 1rem;
+}
+
+.updateButton:hover {
+    background-color: #4c4f6d;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.navbar {
+    position: fixed;
+    top: 1.20%;
+    left: 0.60%;
+}
